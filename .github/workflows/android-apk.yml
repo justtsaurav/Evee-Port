@@ -20,11 +20,13 @@ jobs:
         with:
           node-version: 22
 
+      
       - name: Install web dependencies
-  run: npm install --legacy-peer-deps --no-audit --no-fund
+        run: npm install --legacy-peer-deps --no-audit --no-fund
 
-  - name: Install Capacitor Android tooling
-  run: npm install @capacitor/core @capacitor/cli @capacitor/android --legacy-peer-deps --no-audit --no-fund
+      - name: Install Capacitor Android tooling
+        run: npm install @capacitor/core @capacitor/cli @capacitor/android --legacy-peer-deps --no-audit --no-fund
+
 
       - name: Build web app
         run: npm run build
