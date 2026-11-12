@@ -1,0 +1,131 @@
+@import "tailwindcss";
+@custom-variant dark (&:where(.dark, .dark *));
+
+@layer base {
+  :root {
+    --bg-main: #0B0D10;
+    --bg-secondary: #11151A;
+    --bg-card: #191E24;
+    --bg-card-elevated: #222930;
+    --accent-lime: #C8FF35;
+    --text-primary: #F5F7F2;
+    --text-secondary: #9AA4AD;
+    --disabled: #505860;
+    --border-color: #343C44;
+
+    --font-display: 'Outfit', -apple-system, BlinkMacSystemFont, sans-serif;
+    --font-body: 'DM Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+    --font-mono: 'JetBrains Mono', monospace;
+  }
+
+  body {
+    font-family: var(--font-body);
+    background-color: var(--bg-main);
+    color: var(--text-primary);
+    overflow-x: hidden;
+    user-select: none;
+    -webkit-user-select: none;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    font-family: var(--font-display);
+  }
+
+  .font-display {
+    font-family: var(--font-display);
+  }
+
+  .font-mono-numbers {
+    font-family: var(--font-mono);
+    font-variant-numeric: tabular-nums;
+  }
+}
+
+/* 3D Offset Card & Button Utilities matching the UI Kit */
+.ui-card-3d {
+  background-color: #191E24;
+  border: 2px solid #343C44;
+  border-radius: 1.25rem;
+  box-shadow: 3px 3px 0px #000000;
+  transition: all 0.15s ease-in-out;
+}
+
+.ui-card-3d:hover {
+  border-color: #48545F;
+}
+
+.ui-card-elevated-3d {
+  background-color: #222930;
+  border: 2px solid #343C44;
+  border-radius: 1.25rem;
+  box-shadow: 4px 4px 0px #000000;
+}
+
+.ui-btn-pill-lime {
+  background-color: #C8FF35;
+  color: #0B0D10;
+  font-weight: 700;
+  border: 2px solid #343C44;
+  border-radius: 9999px;
+  box-shadow: 3px 3px 0px #000000;
+  transition: all 0.12s ease-in-out;
+}
+
+.ui-btn-pill-lime:hover {
+  background-color: #D6FF59;
+}
+
+.ui-btn-pill-lime:active {
+  transform: translate(2px, 2px);
+  box-shadow: 1px 1px 0px #000000;
+}
+
+.ui-btn-pill-dark {
+  background-color: #222930;
+  color: #F5F7F2;
+  font-weight: 600;
+  border: 2px solid #343C44;
+  border-radius: 9999px;
+  box-shadow: 3px 3px 0px #000000;
+  transition: all 0.12s ease-in-out;
+}
+
+.ui-btn-pill-dark:hover {
+  background-color: #2D3640;
+  border-color: #48545F;
+}
+
+.ui-btn-pill-dark:active {
+  transform: translate(2px, 2px);
+  box-shadow: 1px 1px 0px #000000;
+}
+
+.ui-touch-btn {
+  background-color: rgba(25, 30, 36, 0.85);
+  border: 2px solid #343C44;
+  box-shadow: 3px 3px 0px rgba(0, 0, 0, 0.7);
+  transition: transform 0.08s ease, background-color 0.08s ease;
+}
+
+.ui-touch-btn:active {
+  transform: translate(2px, 2px) scale(0.96);
+  box-shadow: 1px 1px 0px rgba(0, 0, 0, 0.7);
+  background-color: #C8FF35;
+  color: #0B0D10;
+}
+
+/* Custom scrollbars */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+::-webkit-scrollbar-track {
+  background: #0B0D10;
+}
+::-webkit-scrollbar-thumb {
+  background: #343C44;
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #505860;
+}

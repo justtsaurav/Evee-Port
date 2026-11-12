@@ -1,0 +1,6 @@
+{
+  "name": "RustSwitch",
+  "description": "High-performance Nintendo Switch emulator for Android written in Rust, optimized for MediaTek Dimensity 7300 and Mali-G615 with Vulkan graphics.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
